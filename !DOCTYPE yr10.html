@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       HEAD SECTION
+       Contains meta information, the page title, and internal CSS styles.
+  ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Year 10 Industrial Timber - 2025. Stage 5 Timber Program featuring units such as Mirror and Bedside Table.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Year 10 Industrial Timber - 2025</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    h1, h2, h3, h4, h5 {
+      margin: 0 0 10px 0;
+    }
+    /* HEADER SECTION */
+    header {
+      background: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    /* NAVIGATION BAR */
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #0056b3;
+      flex-wrap: wrap;
+    }
+    nav a {
+      padding: 15px 20px;
+      color: #fff;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background: #003f80;
+    }
+    /* GOOGLE CLASSROOM SECTION */
+    .google-classroom {
+      background: #fffbcc;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      margin: 20px auto;
+      width: 90%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+    .google-classroom h2 {
+      color: #007bff;
+    }
+    .google-classroom p {
+      font-size: 1.1em;
+    }
+    .google-classroom a {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .google-classroom a:hover {
+      background: #0056b3;
+    }
+    /* MAIN CONTENT */
+    main.content {
+      padding: 20px;
+    }
+    .content-section {
+      display: none;
+      background: #fff;
+      margin: 10px auto;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      border-radius: 5px;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .content-section.active {
+      display: block;
+      opacity: 1;
+    }
+    /* COLLAPSIBLE SECTIONS */
+    details {
+      background: #e9ecef;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+    }
+    /* RESOURCE LINKS */
+    .resource-links ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .resource-links li {
+      margin: 5px 0;
+    }
+    .resource-links a {
+      color: #007bff;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+    .resource-links a:hover {
+      color: #0056b3;
+    }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    footer a:hover {
+      color: #d9534f;
+    }
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 10px;
+      }
+      .content-section {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER SECTION -->
+  <header>
+    <h1>Year 10 Industrial Timber - 2025</h1>
+    <p>Stage 5 Timber Program: Mirror, Bedside Table &amp; More</p>
+  </header>
+
+  <!-- GOOGLE CLASSROOM SECTION -->
+  <section class="google-classroom" aria-label="Google Classroom Invitation">
+    <h2>Join Our Google Classroom</h2>
+    <p>Use the code below to join the class and access all online resources:</p>
+    <p><strong>Classroom Code: <span style="color: #d9534f; font-size: 1.3em;">l3uugkr</span></strong></p>
+    <a href="https://classroom.google.com/" target="_blank">Join Google Classroom</a>
+  </section>
+
+  <!-- NAVIGATION SECTION -->
+  <nav aria-label="Main Navigation">
+    <a href="#overview" class="nav-link active" data-section="overview">Course Overview</a>
+    <a href="#program" class="nav-link" data-section="program">Subject Program</a>
+    <a href="#syllabus" class="nav-link" data-section="syllabus">Syllabus Breakdown</a>
+    <a href="#assessment" class="nav-link" data-section="assessment">Assessments</a>
+
+    <!-- Mirror Unit & Theory -->
+    <a href="#mirror-unit" class="nav-link" data-section="mirror-unit">Mirror Unit</a>
+    <a href="#mirror-theory" class="nav-link" data-section="mirror-theory">Mirror Theory Content</a>
+
+    <!-- Bedside Table Unit & Theory -->
+    <a href="#bedside-unit" class="nav-link" data-section="bedside-unit">Bedside Table Unit</a>
+    <a href="#bedside-theory" class="nav-link" data-section="bedside-theory">Bedside Table Theory</a>
+
+    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+  </nav>
+
+  <!-- MAIN CONTENT SECTION -->
+  <main class="content">
+    <!-- Course Overview -->
+    <section class="content-section active" id="overview" tabindex="0">
+      <h2>Course Overview</h2>
+      <p>
+        Welcome to the Year 10 Timber Technology course. This Stage 5 program builds upon your Year 9 foundations
+        by exploring advanced woodworking projects, including the Mirror and Bedside Table. You’ll refine your
+        design, joinery, and finishing skills, while focusing on safety and sustainable practices.
+      </p>
+    </section>
+
+    <!-- Subject Program Section -->
+    <section class="content-section" id="program" tabindex="0">
+      <h2>Subject Program</h2>
+      <p>
+        Download the full Stage 5 Timber Program for Year 10, which includes detailed breakdowns for units such as
+        the Mirror and Bedside Table.
+      </p>
+      <div class="resource-links">
+        <ul>
+          <li><a href="[Program PDF or Google Doc Link]" target="_blank">View Full Program Details</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Syllabus Breakdown Section -->
+    <section class="content-section" id="syllabus" tabindex="0">
+      <h2>Syllabus Breakdown</h2>
+      <p>
+        This syllabus covers advanced topics in workshop safety, timber properties, joinery techniques, and sustainable design.
+        Each term focuses on a different project or set of skills:
+      </p>
+      <ul>
+        <li><strong>Term 1:</strong> Mirror Unit</li>
+        <li><strong>Term 2:</strong> Advanced Joinery &amp; Project Planning</li>
+        <li><strong>Term 3:</strong> Bedside Table Unit</li>
+        <li><strong>Term 4:</strong> Final Project Completion &amp; Evaluation</li>
+      </ul>
+    </section>
+
+    <!-- Assessment Information Section -->
+    <section class="content-section" id="assessment" tabindex="0">
+      <h2>Assessments</h2>
+      <p>
+        You’ll be assessed on both practical skills and theoretical understanding:
+      </p>
+      <ul>
+        <li><strong>Practical Projects:</strong> Safe and accurate completion of woodworking tasks.</li>
+        <li><strong>Portfolio Work:</strong> Documentation of design processes, planning, and reflections.</li>
+        <li><strong>Class Tests:</strong> Understanding of workshop safety, timber properties, and design theory.</li>
+      </ul>
+      <p>Please refer to the course handbook for detailed rubrics and important deadlines.</p>
+    </section>
+
+    <!-- Mirror Unit (Short Weekly Overviews) -->
+    <section class="content-section" id="mirror-unit" tabindex="0">
+      <h2>Mirror Unit</h2>
+      <p>
+        <strong>Summary:</strong> Mirror | Stage 5 | Technology<br>
+        <strong>Duration:</strong> 20 weeks (Term 1, 40-minute lessons, 4 periods per week)
+      </p>
+      <h3>Unit Overview</h3>
+      <p>
+        The Mirror Unit (Term 1) focuses on designing and building a mirror frame. Students will develop advanced
+        joinery techniques, use jigs, and explore finishing methods to create a personalised mirror.
+      </p>
+      <h3>Outcomes &amp; Assessment Overview</h3>
+      <ul>
+        <li>IND51 – Manage WHS issues and risks.</li>
+        <li>IND52 – Apply design principles to modify and produce projects.</li>
+        <li>IND53 – Use hand/machine tools effectively.</li>
+        <li>IND54 – Justify material selection.</li>
+        <li>IND55 – Communicate design ideas effectively.</li>
+        <li>IND56 – Engage in collaborative work practices.</li>
+        <li>IND57 – Transfer skills across contexts.</li>
+        <li>IND58 – Evaluate products (functional, economic, aesthetic, environmental).</li>
+        <li>IND59 – Analyse emerging timber technologies.</li>
+        <li>IND510 – Assess technology’s impact on society/environment.</li>
+      </ul>
+      <p><strong>Assessment:</strong> Practical 25%, Folio 5%, Class Test 10%</p>
+
+      <h3>Weekly Breakdown (Short Overview)</h3>
+      <!-- 20-week scope from mirror_2021-06-16.docx in short bullet form -->
+      <details>
+        <summary><strong>Week 1:</strong> Introduction and Workshop Safety. Constraints and limitations.</summary>
+        <p>
+          <strong>Content:</strong> OHS, workshop signage, WHS Act, basic first aid, design factors (colour, grain, hardware, proportion).<br>
+          <strong>Theory:</strong> Refresh Onguard topics, reinforce safe machine use, PPE importance.<br>
+          <strong>Practical:</strong> Measure, mark, and cut a rebate/housing joint.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 1.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 2:</strong> Design and sketches. Measure and Mark-out. Safe use of Tools.</summary>
+        <p>
+          <strong>Content:</strong> Explore functional/aesthetic design aspects; safely use/maintain hand &amp; power tools; revise PPE.<br>
+          <strong>Theory:</strong> Discuss existing designs, generate sketches, SOPs.<br>
+          <strong>Practical:</strong> Cut timber to lengths for mirror frame.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 2.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 3:</strong> Dress and prepare timber to size. Plane. Project Management.</summary>
+        <p>
+          <strong>Content:</strong> FEWTEL, DAR; apply project management steps; interpret plans/material lists.<br>
+          <strong>Theory:</strong> Refresh handplane usage, checking square face/side.<br>
+          <strong>Practical:</strong> Demonstrate/observe handplane/thicknesser.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 3.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 4:</strong> Dowel, biscuit, Domino Joints. Timber properties, defects, selection.</summary>
+        <p>
+          <strong>Content:</strong> Use framing/corner/widening methods; research appropriate timbers, identify defects.<br>
+          <strong>Theory:</strong> Safety aspects for power tools; evaluate dowel, biscuit, domino joints.<br>
+          <strong>Practical:</strong> Demonstrate dowel/biscuit/domino cutters.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 4.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 5:</strong> Continue Dowel, biscuit, Domino Joints or other suitable Joints.</summary>
+        <p>
+          <strong>Content:</strong> Reinforce safe tool usage, advanced joinery methods.<br>
+          <strong>Theory:</strong> Suitability of various joinery types.<br>
+          <strong>Practical:</strong> Continue practicing these joints.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 5.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 6:</strong> Continue Joints (Dowel, biscuit, Domino).</summary>
+        <p>
+          <strong>Content:</strong> More advanced practice with the same joinery methods.<br>
+          <strong>Theory:</strong> Revisit safety, focusing on consistent accuracy.<br>
+          <strong>Practical:</strong> Perfect joinery techniques.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 6.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 7:</strong> SOP Router. Timber Types &amp; features.</summary>
+        <p>
+          <strong>Content:</strong> Use router for edges/profiles, prepare jigs/templates.<br>
+          <strong>Theory:</strong> Router bit types, cutting direction, safety aspects.<br>
+          <strong>Practical:</strong> Demonstrate router usage for mirror rebate.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 7.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 8:</strong> Dry Clamping. Work Method Statements and SOP’s.</summary>
+        <p>
+          <strong>Content:</strong> Safe clamping procedures, checking square (diagonals, builder's square).<br>
+          <strong>Theory:</strong> Emphasize importance of dryness, alignment, WMS creation.<br>
+          <strong>Practical:</strong> Practice clamping &amp; adjusting for square.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 8.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 9:</strong> Adding Design Features. Timber Conversion.</summary>
+        <p>
+          <strong>Content:</strong> Costing, efficient material usage, annotated sketches, CAD workshop drawings.<br>
+          <strong>Theory:</strong> Good design principles (form &amp; function).<br>
+          <strong>Practical:</strong> Evaluate design features, spreadsheets for costing.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 9.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 10:</strong> Adding Design Features. Workshop Maintenance.</summary>
+        <p>
+          <strong>Content:</strong> Production &amp; detailing techniques (inlay, engraving), advanced manufacturing (CNC).<br>
+          <strong>Theory:</strong> Importance of workshop maintenance &amp; manual handling.<br>
+          <strong>Practical:</strong> Apply finishing touches, ensure safe environment.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 10.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 11:</strong> Assemble / Gluing. Seasoning Timber.</summary>
+        <p>
+          <strong>Content:</strong> Check squareness, identify &amp; overcome timber defects, effects of incorrect seasoning.<br>
+          <strong>Theory:</strong> Gluing &amp; clamping times, seasoning timber.<br>
+          <strong>Practical:</strong> Practice glueing/clamping processes.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 11.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 12:</strong> Assemble / Gluing. Milling Timber.</summary>
+        <p>
+          <strong>Content:</strong> Check squareness, identify &amp; fix defects, discuss plantation forests, carbon pollution.<br>
+          <strong>Theory:</strong> Milling timber, environmental considerations.<br>
+          <strong>Practical:</strong> Continue glueing &amp; clamping processes.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 12.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 13:</strong> Finishing Techniques. Environmental Sustainability.</summary>
+        <p>
+          <strong>Content:</strong> Surface prep, variety of finishes, deforestation, sustainable logging.<br>
+          <strong>Theory:</strong> Sanding &amp; prep techniques, finishing methods.<br>
+          <strong>Practical:</strong> Prepare surfaces, apply chosen finishes.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 13.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 14:</strong> Fitting Glass. Industry Visit / Link.</summary>
+        <p>
+          <strong>Content:</strong> Compare industrial techniques vs. classroom; new/emerging technologies; career paths.<br>
+          <strong>Theory:</strong> Industry comparisons, glass cutting &amp; fitting.<br>
+          <strong>Practical:</strong> Demonstrate cutting glass for the mirror.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 14.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 15:</strong> Safe Handling of Chemicals and MSDS.</summary>
+        <p>
+          <strong>Content:</strong> Environmental &amp; societal impact of resource usage, manufactured boards.<br>
+          <strong>Theory:</strong> Emphasize chemical handling, reading MSDS.<br>
+          <strong>Practical:</strong> Ongoing safe workshop procedures.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 15.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 16:</strong> Polishing. Sustainability.</summary>
+        <p>
+          <strong>Content:</strong> Safe finishing in a well-ventilated area, old-growth timber implications.<br>
+          <strong>Theory:</strong> Timber polishes &amp; sustainability discussion.<br>
+          <strong>Practical:</strong> Ongoing safe finishing procedures.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 16.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 17:</strong> Portfolio Presentation and Evaluation.</summary>
+        <p>
+          <strong>Content:</strong> Evaluate design/work practices; develop design &amp; production folios using ICT.<br>
+          <strong>Theory:</strong> Presentation techniques, reflection on final product.<br>
+          <strong>Practical:</strong> Continue workshop procedures, finalizing documentation.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 17.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 18:</strong> Class Test.</summary>
+        <p>
+          <strong>Content:</strong> Use specialist terminology, comply with WHS signage.<br>
+          <strong>Theory:</strong> Class Test covers safety, design, joinery concepts.<br>
+          <strong>Practical:</strong> Ongoing safe workshop procedures.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 18.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 19:</strong> Catch Up.</summary>
+        <p>
+          <strong>Content:</strong> Tidy any unfinished work, final checks.<br>
+          <strong>Theory:</strong> Review safety, design, finishing.<br>
+          <strong>Practical:</strong> Continue safe procedures, finalizing tasks.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 19.
+        </p>
+      </details>
+      <details>
+        <summary><strong>Week 20:</strong> Hand in project and Theory booklet for marking. Workshop maintenance.</summary>
+        <p>
+          <strong>Content:</strong> Final submission of mirror project and folio.<br>
+          <strong>Theory:</strong> Importance of workshop maintenance, manual handling.<br>
+          <strong>Practical:</strong> Clean-up, tool maintenance, finalize submissions.<br>
+          <strong>Resources:</strong> Google Classroom – Mirror Unit Week 20.
+        </p>
+      </details>
+    </section>
+
+<!-- ===============================
+     MIRROR THEORY CONTENT 
+    
+=============================== -->
+
+<!-- Week 1 -->
+<details>
+  <summary><strong>Week 1: Introduction &amp; Workshop Safety, Constraints &amp; Limitations</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Welcome to Week 1 of the Mirror unit. This week, your focus is on establishing a safe and productive workshop environment and reviewing the project’s overall constraints. You’ll also explore how factors such as <em>colour, grain, hardware, and proportion</em> influence the mirror’s design.
+    </p>
+
+    <!-- Example Placeholder for a YouTube Clip -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Insert your own clip URL -->
+      <iframe width="560" height="315" src="[YOUTUBE_CLIP_PLACEHOLDER]"
+        title="Workshop Safety Clip" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Understanding and following WHS Act &amp; SafeWork NSW guidelines</li>
+      <li>Basic first aid procedures in the workshop</li>
+      <li>Identifying design constraints (e.g., final dimensions, material selection)</li>
+      <li>Importance of safe machine use and correct PPE</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Why is it crucial to refresh workshop safety rules before starting a new project?</li>
+      <li>What constraints might affect your mirror design (size, available timber, hardware)?</li>
+      <li>How can understanding SafeWork NSW regulations help prevent accidents?</li>
+    </ol>
+
+    <h4>Personal Protective Equipment (PPE) &amp; Tools</h4>
+    <p>
+      This week, you’ll revisit the essential PPE for cutting, planing, and sanding. Keep your workspace organized to reduce slip or trip hazards.
+    </p>
+
+    <h4>The Importance of a Safety-First Mindset</h4>
+    <p>
+      A safe, orderly workshop helps you focus on refining your skills without unnecessary risks. Make sure to handle tools properly, follow signage, and keep a clear bench area.
+    </p>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      This quick check ensures you understand the fundamentals of workshop safety and design constraints. 
+      Please complete the “Mirror Week 1 Safety” form on Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By understanding workshop regulations, design limitations, and safe handling of tools, you lay the foundation for a successful Mirror project.
+    </p>
+  </article>
+</details>
+
+<!-- Week 2 -->
+<details>
+  <summary><strong>Week 2: Design &amp; Sketches, Measure &amp; Mark-out, Safe Use of Tools</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      In Week 2, you’ll refine your mirror design through sketches and learn or revisit measuring and marking techniques. This includes selecting the right tools, following proper SOPs, and maintaining a safe environment.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Reviewing past mirror projects for inspiration</li>
+      <li>PMI (Plus, Minus, Interesting) approach to design ideas</li>
+      <li>Measuring &amp; marking out timber accurately</li>
+      <li>Safe operation of basic hand &amp; power tools</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>How can a clear, detailed sketch improve your final outcome?</li>
+      <li>What marking tools are most accurate for your project, and why?</li>
+      <li>Why is it vital to follow SOPs (e.g., Mortise Machine SOP) at each step?</li>
+    </ol>
+
+    <h4>Personal Protective Equipment (PPE) &amp; Tools</h4>
+    <p>
+      Continue to wear eye protection, ear muffs (if necessary), and sturdy footwear. Keep your marking and measuring tools well-maintained for precise results.
+    </p>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Show that you can sketch and mark out your mirror design accurately. 
+      Please complete the “Mirror Week 2 Sketch &amp; Mark-out” activity in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of this week, you should have a clear mirror frame design on paper and be confident in safe measuring and marking techniques.
+    </p>
+  </article>
+</details>
+
+<!-- Week 3 -->
+<details>
+  <summary><strong>Week 3: Dressing Timber &amp; Plane Function, Project Management</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Week 3 highlights the proper preparation of timber (DAR &amp; FEWTEL principles) and using a plane or thicknesser to achieve smooth edges. You’ll also focus on project management, ensuring an efficient sequence of tasks.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>FEWTEL (Face, Edge, Width, Thickness, End, Length) application</li>
+      <li>Using a hand plane or thicknesser for accurate dressing</li>
+      <li>Basic project management: planning tasks, reading material lists</li>
+      <li>Checking for square face/side alignment</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>How does dressing timber properly improve joinery quality?</li>
+      <li>Why is it essential to check for square face/side after each pass?</li>
+      <li>In what ways can project management tools help you stay organized?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Test your knowledge of FEWTEL and plane usage. 
+      Please complete the “Mirror Week 3 Timber Prep” module in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      Mastering timber dressing and basic project management ensures you’re ready for precise joinery work in the following weeks.
+    </p>
+  </article>
+</details>
+
+<!-- Week 4 -->
+<details>
+  <summary><strong>Week 4: Dowel, Biscuit &amp; Domino Joints; Timber Properties &amp; Suitable Joinery</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      This week covers various widening and corner-joint methods—dowel, biscuit, and domino—plus evaluating timber properties for your mirror frame. Consider grain direction, density, and any defects.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Comparing dowel, biscuit, and domino joinery (strength, aesthetics, difficulty)</li>
+      <li>Researching &amp; selecting suitable timbers (grain, defects, sustainability)</li>
+      <li>Safe power tool operation (placeholder for any Onguard references)</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which joinery method do you find most suitable for your mirror design, and why?</li>
+      <li>How do timber defects affect joint strength and appearance?</li>
+      <li>Why is it important to consider environmental factors when choosing timber?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Show your grasp of different joinery methods. 
+      Please complete the “Mirror Week 4 Joinery” activity on Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of this week, you should be ready to apply the joinery technique that best suits your mirror frame, ensuring both structural integrity and a pleasing finish.
+    </p>
+  </article>
+</details>
+
+<!-- Week 5 -->
+<details>
+  <summary><strong>Week 5: Dowel, Biscuit &amp; Domino Joints (Continued) or Other Suitable Joints</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Week 5 continues the focus on joint refinement. You may also explore alternative joints like mortise and tenon if it aligns with your design. The goal is to solidify your skills in accurate, stable joinery.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Refining dowel, biscuit, or domino joinery techniques</li>
+      <li>Considering mortise &amp; tenon or other advanced joints if appropriate</li>
+      <li>Maintaining workshop safety while operating joinery power tools</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What issues might arise if your joints aren’t perfectly aligned?</li>
+      <li>How can you correct minor inaccuracies in your timber before final assembly?</li>
+      <li>Why might you choose mortise &amp; tenon over biscuit or domino in certain frames?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Demonstrate your joinery skills by preparing test joints or refining your mirror frame connections. 
+      Please complete the “Mirror Week 5 Advanced Joints” exercise in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of Week 5, you should feel comfortable executing a variety of joint types, ready to proceed with the rest of the mirror build.
+    </p>
+  </article>
+</details>
+
+<!-- Week 6 -->
+<details>
+  <summary><strong>Week 6: Mortise &amp; Tenon Joints or Other Suitable Joints</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Building on last week’s exploration of dowel, biscuit, and domino joints, Week 6 focuses on <em>mortise and tenon</em> or other advanced joinery if it suits your mirror design. The emphasis is on honing safe tool usage and refining alignment techniques.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Mortise &amp; tenon basics (marking out, cutting, fitting)</li>
+      <li>Maintaining hand, power, and machine tools (SOPs)</li>
+      <li>Assessing when to choose mortise &amp; tenon over biscuit or dowel</li>
+      <li>Checking alignment and squareness to ensure a stable frame</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>How do mortise &amp; tenon joints compare in strength and appearance to biscuit or domino joints?</li>
+      <li>What specific safety measures must you follow when cutting mortises on a drill press or mortiser?</li>
+      <li>How can minor misalignments be corrected before final assembly?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Demonstrate your ability to execute a mortise &amp; tenon joint (or alternative advanced joint). 
+      Please complete the “Mirror Week 6 Advanced Joinery” exercise on Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of this week, you should feel confident using mortise &amp; tenon or other suitable joints, maintaining precise alignment for a robust mirror frame.
+    </p>
+  </article>
+</details>
+
+<!-- Week 7 -->
+<details>
+  <summary><strong>Week 7: On-Guard SOP – Router, Timber Types &amp; Features</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      In Week 7, you’ll shift focus to using a <em>router</em> to shape edges and add decorative elements. You will also explore different timber types and their features, ensuring you choose the right material for aesthetic and functional reasons.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Reviewing Router SOP (Safe Operating Procedures) and safety guidelines</li>
+      <li>Experimenting with different router bits and profiles</li>
+      <li>Timber properties: hardness, grain pattern, and finishing characteristics</li>
+      <li>Jigs and templates for consistent shaping</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What safety considerations are critical when using a router at high RPMs?</li>
+      <li>How do different timber species affect the final routed edge or pattern?</li>
+      <li>In what scenarios might a jig or template be beneficial for shaping your mirror frame?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Practice routing sample edges on scrap timber. 
+      Please complete the “Mirror Week 7 Router &amp; Timber Features” activity in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of this week, you’ll understand how to safely operate a router, apply different profiles, and choose timber species suited to your mirror’s design.
+    </p>
+  </article>
+</details>
+
+<!-- Week 8 -->
+<details>
+  <summary><strong>Week 8: Dry Clamping, Work Method Statements (WMS) &amp; SOPs</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Week 8 focuses on <em>dry clamping</em> techniques, creating or reviewing Work Method Statements (WMS), and adhering to Standard Operating Procedures (SOPs). These steps help ensure accurate assembly and maintain a safe, efficient workshop.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Dry-fitting all components to check alignment and squareness</li>
+      <li>Completing or updating WMS for each major step (cutting, shaping, assembly)</li>
+      <li>Refining knowledge of SOPs for relevant tools (router, mortiser, etc.)</li>
+      <li>Preparing for final assembly by identifying any adjustments needed</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Why is a dry clamp essential before gluing or final assembly?</li>
+      <li>How do Work Method Statements help reduce errors and accidents?</li>
+      <li>Which SOPs are most critical to review at this stage of the Mirror project?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Demonstrate your dry clamping technique and show your completed WMS. 
+      Please complete the “Mirror Week 8 WMS &amp; Dry Clamp” activity on Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      Proper dry-fitting and thorough documentation (WMS, SOP references) set you up for a smooth, safe final assembly in the coming weeks.
+    </p>
+  </article>
+</details>
+
+<!-- Week 9 -->
+<details>
+  <summary><strong>Week 9: Adding Design Features &amp; Timber Conversion</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      In Week 9, you’ll explore ways to enhance your mirror’s appearance with <em>design features</em> such as decorative edges, inlays, or custom patterns. You’ll also look at timber conversion processes (e.g., air vs. kiln drying) and how these affect quality and cost.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Incorporating design enhancements (inlays, curved edges, laser engraving, etc.)</li>
+      <li>Understanding timber conversion methods (air drying vs. kiln drying)</li>
+      <li>Spreadsheet costing and material quantity calculations</li>
+      <li>Evaluating how seasoning methods affect the final product’s stability</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which design feature could add visual appeal without compromising frame strength?</li>
+      <li>How do different seasoning methods (air vs. kiln) impact cost and timber properties?</li>
+      <li>Why is it important to do a costing exercise for your materials?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Show your proposed design enhancements (sketches or small mock-ups) and complete the “Mirror Week 9 Costing &amp; Timber Conversion” activity in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      By the end of this week, you should have a clear plan for any additional design elements and a solid understanding of how timber conversion affects quality and budgeting.
+    </p>
+  </article>
+</details>
+
+<!-- Week 10 -->
+<details>
+  <summary><strong>Week 10: Adding Design Features (Continued) &amp; Workshop Maintenance</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>
+      Week 10 continues the exploration of design enhancements, but also highlights <em>workshop maintenance</em>—an essential practice for safety, tool longevity, and efficient workflow. You’ll finalize any extra details before moving on to assembly or finishing.
+    </p>
+
+    <h4>Key Focus Areas</h4>
+    <ul>
+      <li>Final checks on design modifications (inlays, curves, routed edges)</li>
+      <li>Importance of a clean, organized workshop for accuracy and safety</li>
+      <li>Maintaining tools (sharpening, cleaning) to ensure top performance</li>
+      <li>Preparing for final assembly steps in upcoming weeks</li>
+    </ul>
+
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which final design tweaks can you realistically implement without delaying the project?</li>
+      <li>Why is regular workshop maintenance crucial for consistent, accurate work?</li>
+      <li>How does tool care (e.g., blade sharpening) improve safety and finish quality?</li>
+    </ol>
+
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>
+      Show your updated design sketches or test pieces. Document your workshop cleanup routine. 
+      Please complete the “Mirror Week 10 Maintenance &amp; Design Check” activity in Google Classroom. 
+      <br>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr" target="_blank" style="color: blue;">
+        Go to Google Classroom
+      </a>
+    </p>
+
+    <h4>Conclusion</h4>
+    <p>
+      With design features finalized and the workshop in good order, you’ll be set to assemble and finish your mirror in the coming weeks.
+    </p>
+  </article>
+</details>
+
+<!-- Week 11 -->
+<details>
+  <summary><strong>Week 11: Assemble / Gluing &amp; Seasoning Timber</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>This week focuses on assembling and gluing your mirror frame components while exploring the importance of timber seasoning. You will learn how to align parts correctly, apply adhesives effectively, and understand how seasoning affects timber’s stability and strength.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+      <!-- or <img src="YOUR_IMAGE_LINK" alt="Assembly Demonstration" style="max-width:100%; height:auto;"> -->
+    </div>
+    
+    <h4>Timber Seasoning Overview</h4>
+    <p>Timber seasoning reduces moisture content, improving durability and preventing defects. You will compare different seasoning methods (air vs. kiln) and learn how each influences timber’s characteristics during assembly and finishing.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Why is correct alignment and clamping so critical during glue-ups?</li>
+      <li>How does timber seasoning impact the final product’s stability?</li>
+      <li>What factors determine whether air or kiln seasoning is preferable for a particular project?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Show you’ve mastered the assembly steps and understand the importance of timber seasoning.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 11'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>By properly assembling and gluing your project while considering timber seasoning, you ensure a stable, high-quality final product. Understanding moisture content and adhesion techniques is key to producing a long-lasting mirror frame.</p>
+  </article>
+</details>
+
+<!-- Week 12 -->
+<details>
+  <summary><strong>Week 12: Assemble / Gluing &amp; Milling Timber</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>In Week 12, you will continue refining assembly techniques and explore milling processes. Milling involves shaping timber using tools like thicknessers or planers, ensuring uniformity and precision in your mirror frame’s components.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Milling Processes</h4>
+    <p>Milling can include planing, thicknessing, or using CNC equipment. Each method aims to produce accurate, consistent pieces for assembly. You’ll discuss how to identify defects and adapt milling strategies to avoid weakening the timber.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What safety considerations must be addressed before milling timber?</li>
+      <li>How does milling enhance the mirror frame’s overall quality?</li>
+      <li>Which milling methods best suit different timber species or defect types?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Demonstrate your understanding of milling’s role in achieving precise, stable components.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 12'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>Milling timber ensures uniform thickness and shape, improving the final appearance and stability of your mirror frame. Properly milled pieces fit together more accurately, minimizing gaps and enhancing overall structural integrity.</p>
+  </article>
+</details>
+
+<!-- Week 13 -->
+<details>
+  <summary><strong>Week 13: Finishing Techniques &amp; Environmental Sustainability</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>This week introduces various finishing techniques to protect and enhance your mirror frame, while also highlighting environmental sustainability. From sanding and sealing to oiling or varnishing, you’ll learn the best practices to achieve a professional finish.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Finishing &amp; Sustainability</h4>
+    <p>Finishes can range from clear coats to stains or oils. You’ll discuss how each option affects appearance and durability. Additionally, consider the environmental impact of these finishes and the role of sustainable forestry in reducing deforestation.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What factors influence your choice of finish for a timber project?</li>
+      <li>How do sustainable logging practices help preserve natural resources?</li>
+      <li>In what ways can you reduce waste or chemical usage when finishing a project?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Show your knowledge of safe finishing methods and environmental stewardship.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 13'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>A high-quality finish enhances both the appearance and longevity of your mirror. By adopting sustainable practices—such as choosing eco-friendly finishes and responsibly sourced timber—you can create beautiful, durable projects with minimal environmental impact.</p>
+  </article>
+</details>
+
+<!-- Week 14 -->
+<details>
+  <summary><strong>Week 14: Fitting Glass &amp; Industry Connections</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>During Week 14, you will learn how to fit glass into your mirror frame safely and explore industry links, such as professional glazing or advanced manufacturing processes. This understanding broadens your perspective on real-world woodworking applications.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Fitting Glass</h4>
+    <p>Properly fitting glass requires precise measurements, suitable adhesives or hardware, and attention to safety—handling glass edges and ensuring a secure fit. You’ll also discuss how different glass thicknesses or types (e.g., safety glass) impact design.</p>
+    
+    <h4>Industry Visit / Link</h4>
+    <p>Learning from professionals—such as visiting a local cabinetmaker or glazier—can provide insights into advanced techniques, equipment, and career pathways. Keep an eye out for emerging technologies that might influence timber projects.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What safety considerations are crucial when cutting or handling glass?</li>
+      <li>How does professional glazing differ from small-scale, classroom techniques?</li>
+      <li>Which industry tools or processes most interest you for future woodworking projects?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Reflect on the role of professional standards and how you can incorporate them into your own mirror project.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 14'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>By mastering safe glass-fitting methods and exploring industry connections, you enhance both the functionality and professionalism of your mirror project. These skills prepare you for more advanced woodworking and potential future career opportunities.</p>
+  </article>
+</details>
+
+<!-- Week 15 -->
+<details>
+  <summary><strong>Week 15: Safe Handling of Chemicals &amp; MSDS</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>In Week 15, you will focus on the safe handling of chemicals used in finishing or cleaning processes, as well as how to interpret Material Safety Data Sheets (MSDS). Proper chemical use protects you, your peers, and the environment.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Understanding MSDS</h4>
+    <p>An MSDS outlines the hazards, handling procedures, and first-aid measures for a specific chemical. Knowing how to read and apply this information is essential for working responsibly with finishes, adhesives, and solvents in the workshop.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What key information should you look for on an MSDS before using a product?</li>
+      <li>Why is ventilation important when working with certain finishes or chemicals?</li>
+      <li>How can improper chemical disposal affect the environment?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Demonstrate your knowledge of MSDS usage and responsible chemical handling.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 15'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>Safe chemical handling and proper MSDS interpretation are non-negotiable in any workshop environment. By respecting these guidelines, you minimize risks and uphold safety and environmental standards in your timber projects.</p>
+  </article>
+</details>
+
+<!-- Week 16 -->
+<details>
+  <summary><strong>Week 16: Polishing &amp; Sustainability</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>Week 16 delves into polishing techniques and the broader concept of sustainability. Polishing can bring out the natural beauty of timber, while sustainable choices ensure your project aligns with environmental ethics.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Polishing Techniques</h4>
+    <p>Polishing can involve buffing, waxing, or using specialized compounds. Each approach aims to produce a smooth, glossy finish, enhancing the grain. You’ll explore how different polishes affect timber’s appearance and longevity.</p>
+    
+    <h4>Sustainability Considerations</h4>
+    <p>Choosing renewable resources, minimizing chemical waste, and recycling offcuts are ways to reduce environmental impact. By combining aesthetic goals with sustainable practices, you create a project that is both beautiful and eco-friendly.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which polishing methods best suit different timber finishes?</li>
+      <li>How can you ensure minimal chemical waste or runoff during polishing?</li>
+      <li>Why is sustainability important in modern woodworking industries?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Reflect on how to balance a professional finish with responsible resource use.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 16'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>Polishing is often the final step that showcases your craftsmanship. By integrating sustainability at this stage, you ensure the project’s visual impact doesn’t come at an environmental cost, reflecting a modern, responsible approach to timber technology.</p>
+  </article>
+</details>
+
+<!-- Week 17 -->
+<details>
+  <summary><strong>Week 17: Portfolio Presentation &amp; Evaluation</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>As you near the completion of your mirror project, Week 17 focuses on compiling a thorough portfolio and conducting a self-evaluation. Documenting your process not only proves your learning but also helps refine future woodworking practices.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Portfolio Essentials</h4>
+    <p>Your portfolio should include design sketches, materials lists, risk assessments, progress photos, and reflective notes. By organizing these elements, you create a comprehensive record of your decisions, problem-solving, and project management skills.</p>
+    
+    <h4>Evaluation Techniques</h4>
+    <p>Critical self-assessment helps you identify strengths and areas for improvement. Consider the project’s aesthetic quality, structural integrity, and adherence to safety protocols. This honest reflection informs future successes in timber technology.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which portfolio elements best demonstrate your problem-solving skills?</li>
+      <li>How can self-evaluation shape the way you approach your next project?</li>
+      <li>What role do images and diagrams play in communicating your process?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Show how effectively you can articulate your project’s journey in a polished, detailed portfolio.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 17'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>A well-structured portfolio and thorough self-evaluation illustrate your growth as a woodworker. By documenting each stage, you gain insights into your methods and build a foundation for even more ambitious projects in the future.</p>
+  </article>
+</details>
+
+<!-- Week 18 -->
+<details>
+  <summary><strong>Week 18: Class Test</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>In Week 18, you’ll undertake a class test evaluating your knowledge of workshop safety, timber properties, joinery, and design principles. This test ensures you have a firm grasp of the essential theoretical aspects underpinning your practical work.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Test Focus Areas</h4>
+    <p>Expect questions on WHS signage, correct tool usage, joinery methods, and finishing techniques. Review your notes, workbook, and any relevant onguard quizzes to reinforce your understanding.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which topics do you feel most confident about, and which need further review?</li>
+      <li>How does theoretical knowledge improve your practical results?</li>
+      <li>What strategies help you remember workshop safety protocols and design theory?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Prove your theoretical mastery in the class test, showing a clear link between knowledge and hands-on skills.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 18'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>The class test is an opportunity to consolidate your learning and confirm that you can apply theoretical principles in real-world woodworking scenarios. Successful performance indicates readiness to progress in timber technology.</p>
+  </article>
+</details>
+
+<!-- Week 19 -->
+<details>
+  <summary><strong>Week 19: Catch Up</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>Week 19 provides a buffer for catching up on incomplete tasks, addressing design modifications, or refining your mirror project before the final hand-in. Use this time to revisit any areas needing extra attention.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Task Priorities</h4>
+    <p>Focus on finishing touches—sanding, minor repairs, or final coats of finish. Confirm that your workbook, risk assessments, and reflective notes are up to date, ensuring a cohesive final submission.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>Which parts of your project remain unfinished or need improvement?</li>
+      <li>How can peer feedback help you refine your design or technique?</li>
+      <li>What are your main takeaways from this unit so far?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Make sure every element of your project meets the safety and quality standards you’ve learned.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 19'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>This catch-up week ensures your mirror project is polished and all documentation is comprehensive. By addressing any lingering issues, you set yourself up for a successful final submission in Week 20.</p>
+  </article>
+</details>
+
+<!-- Week 20 -->
+<details>
+  <summary><strong>Week 20: Hand in Project &amp; Booklet for Marking – Workshop Maintenance</strong></summary>
+  <article>
+    <h4>Introduction</h4>
+    <p>In the final week, you’ll present your completed mirror and hand in your theory booklet for marking. This stage also emphasizes workshop maintenance, ensuring a safe and organized environment for future classes.</p>
+    
+    <!-- Placeholder for a relevant image or video -->
+    <div style="text-align: center; margin: 20px 0;">
+      <!-- Example: <iframe width="560" height="315" src="YOUR_VIDEO_LINK" ...></iframe> -->
+    </div>
+    
+    <h4>Final Submission &amp; Cleanup</h4>
+    <p>Prepare your mirror for presentation—removing dust, checking for any loose hardware, and ensuring it meets all design requirements. Submit your theory booklet, which should include your portfolio, research, and reflective components. Afterward, join your classmates in a thorough workshop maintenance session.</p>
+    
+    <h4>Discussion Questions</h4>
+    <ol>
+      <li>What final quality checks should you perform on your mirror?</li>
+      <li>How does good workshop maintenance benefit everyone using the space?</li>
+      <li>In what ways can you carry the lessons from this project into future woodworking tasks?</li>
+    </ol>
+    
+    <h4 style="color:red; font-weight:bold;">HAVE YOU BEEN PAYING ATTENTION?</h4>
+    <p>Celebrate your achievements while ensuring the workshop is clean and safe for the next project cycle.</p>
+    <p>Please complete the form in the topic <strong>'Mirror Unit Week 20'</strong> on Google Classroom.</p>
+    <p>
+      <a href="https://classroom.google.com/c/NzQ5MDQxMzk4MjAz?cjc=l3uugkr"
+         target="_blank" style="color: blue;">Go to Google Classroom</a>
+    </p>
+    
+    <h4>Conclusion</h4>
+    <p>By finalizing your mirror project and submitting all documentation, you demonstrate mastery of both practical and theoretical components of this unit. Maintaining a tidy workshop sets the stage for future students and reinforces the professional standards you’ve embraced.</p>
+  </article>
+</details>
+
+
+
+    <!-- Bedside Table Theory Content (Detailed) -->
+    <section class="content-section" id="bedside-theory" tabindex="0">
+      <h2>Bedside Table Theory</h2>
+      <p>
+        This section provides the in-depth weekly content for the Bedside Table Unit, similar to how
+        “Breadboard Theory Content” is used in Year 9. Each week below contains the full text from the scope and sequence.
+      </p>
+
+      <!-- Example for Week 1 from bedside_table_2021-06-16.docx -->
+      <details open>
+        <summary><strong>Week 1: Introduction. OHS and Risk Management.</strong></summary>
+        <article>
+          <h4>Stage 4/5 - Timber Content for Years 7-10</h4>
+          <p>
+            <strong>Content:</strong> Demonstrate safe workshop practices... <em>[Paste entire doc text from the Bedside Table doc’s Week 1 here]</em>
+          </p>
+          <p><strong>Theory:</strong> Onguard topics, quizzes, refresh safe machine use.</p>
+          <p><strong>Workbook/Folio:</strong> General Workshop Safety Sheet, design input for table.</p>
+          <p><strong>Practical:</strong> Measure, mark, cut a mortice and tenon joint as refresh.</p>
+        </article>
+      </details>
+      <!-- Repeat <details> for Weeks 2–20 with full doc text if desired -->
+    </section>
+
+    <!-- Projects Section -->
+    <section class="content-section" id="projects" tabindex="0">
+      <h2>Projects</h2>
+      <p>
+        Below are key projects for Year 10 Industrial Timber. Each project integrates practical tasks with theoretical learning.
+      </p>
+      <article aria-labelledby="mirror-project-heading">
+        <h3 id="mirror-project-heading">Mirror Project</h3>
+        <p>
+          Design and build a unique mirror frame demonstrating advanced joinery techniques and sustainable practices.
+        </p>
+      </article>
+      <article aria-labelledby="bedside-project-heading">
+        <h3 id="bedside-project-heading">Bedside Table Project</h3>
+        <p>
+          Create a bedside table meeting both aesthetic and functional requirements, applying advanced woodworking skills.
+        </p>
+      </article>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section" id="contact" tabindex="0">
+      <h2>Contact Information</h2>
+      <p>
+        For further assistance or inquiries, please contact your course coordinator:
+      </p>
+      <ul>
+        <li>Email: <a href="mailto:timbertech@school.edu.au">timbertech@school.edu.au</a></li>
+        <li>Phone: (123) 456-7890</li>
+        <li>Office Hours: Monday – Friday, 9:00 AM to 3:00 PM</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <p>&copy; 2025 Industrial Timber</p>
+    <p><a href="#overview">Back to Top</a></p>
+  </footer>
+
+  <!-- JAVASCRIPT FOR INTERACTIVE NAVIGATION -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.content-section');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Remove active class from all nav links and sections
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+        // Add active class to clicked link and corresponding section
+        link.classList.add('active');
+        const targetID = link.getAttribute('data-section');
+        document.getElementById(targetID).classList.add('active');
+        // Scroll to that section for better user experience
+        document.getElementById(targetID).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
