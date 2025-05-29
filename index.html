@@ -3773,7 +3773,7 @@ document.querySelectorAll('.check-btn').forEach(button => {
 });
 </script>
 <script>
-async function submitQuiz(quizId, weeks) {
+async function submitQuiz(quizId, week) {
   const studentName = prompt("Please enter your full name:");
   if (!studentName || studentName.trim() === '') {
     alert("You must enter your name to submit the quiz.");
@@ -3795,13 +3795,15 @@ async function submitQuiz(quizId, weeks) {
     };
   });
 
+  const score = answers.filter(a => a.isCorrect).length;
+
   const payload = {
     studentName,
-    weeks,
-    answers
+    week,
+    score
   };
 
-  await fetch('https://script.google.com/macros/s/AKfycbwxwlATCVupP7vOMqCs33xJKyyQbFO4uX8DBnXB7XqzgrBp9o27V1u9NUy8NqHoo6Tf/exec', {
+  await fetch('https://script.google.com/macros/s/AKfycbya0EHlfInCNU8toTn0nNeHxJSIesb9V7ms4t1ZC7dflc9AJuraEHg4tS897fNNBsRm/exec', {
     method: 'POST',
     mode: 'no-cors',
     headers: {
