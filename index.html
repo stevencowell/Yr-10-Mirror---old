@@ -3786,12 +3786,14 @@ async function submitQuiz(quizId, week) {
     const selectedOption = li.querySelector('input[type="radio"]:checked');
     const correctOption = li.querySelector('input[data-correct="true"]');
 
+    const isCorrect = selectedOption ? selectedOption.hasAttribute('data-correct') : false;
+
     return {
       questionNumber: index + 1,
       questionText,
       studentAnswer: selectedOption ? selectedOption.value : 'No answer',
       correctAnswer: correctOption.value,
-      isCorrect: selectedOption ? selectedOption === correctOption : false
+      isCorrect
     };
   });
 
