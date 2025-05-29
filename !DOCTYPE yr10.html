@@ -3898,14 +3898,21 @@ async function submitQuiz(quizId, weeks, studentName) {
     answers
   };
 
-  await fetch("https://script.google.com/macros/s/AKfycby9zK0WK3F_K8myuvtC5qEk0QAiTiqZGyzJTLrv7_QaFkmgnO7a0adpHBtXaMhuLq9J/exec", {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(payload)
-  });
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycby9zK0WK3F_K8myuvtC5qEk0QAiTiqZGyzJTLrv7_QaFkmgnO7a0adpHBtXaMhuLq9J/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      console.error('Submission failed:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error submitting quiz:', error);
+  }
 
   alert("Quiz responses submitted successfully!");
 }
