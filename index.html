@@ -3768,7 +3768,7 @@ document.querySelectorAll('.check-btn').forEach(button => {
 
     const totalQuestions = questions.length;
     const messageSpan = quiz.querySelector('.quiz-msg');
-    messageSpan.textContent = `You got ${correctAnswers} out of ${totalQuestions} correct.`;
+    messageSpan.textContent = `You got ${correctAnswers}/${totalQuestions} correct.`;
   });
 });
 </script>
@@ -3796,11 +3796,13 @@ async function submitQuiz(quizId, week) {
   });
 
   const score = answers.filter(a => a.isCorrect).length;
+  const totalQuestions = answers.length;
+  const scoreText = `${score}/${totalQuestions}`;
 
   const payload = {
     studentName,
     week,
-    score
+    score: scoreText
   };
 
   await fetch('https://script.google.com/macros/s/AKfycbya0EHlfInCNU8toTn0nNeHxJSIesb9V7ms4t1ZC7dflc9AJuraEHg4tS897fNNBsRm/exec', {
