@@ -96,7 +96,7 @@ document.querySelectorAll('.check-btn').forEach(button => {
     messageSpan.textContent = `You got ${correctAnswers}/${totalQuestions} correct.`;
   });
 });
-async function submitQuiz(button, week) {
+async function submitQuiz(button, week, level) {
   const studentName = await showPrompt("Please enter your full name:");
   if (!studentName || studentName.trim() === '') {
     await showAlert("You must enter your name to submit the quiz.");
@@ -127,6 +127,7 @@ async function submitQuiz(button, week) {
   const payload = {
     studentName,
     week,
+    level,
     score: scoreText
   };
 
