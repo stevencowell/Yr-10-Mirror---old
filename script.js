@@ -21,8 +21,7 @@ function speakText(btn){
         document.getElementById(targetID).scrollIntoView({ behavior: 'smooth' });
       });
     });
-  </script>
-<script>
+
 // Quiz check answers functionality
 document.querySelectorAll('.check-btn').forEach(button => {
   button.addEventListener('click', function() {
@@ -52,8 +51,6 @@ document.querySelectorAll('.check-btn').forEach(button => {
     messageSpan.textContent = `You got ${correctAnswers}/${totalQuestions} correct.`;
   });
 });
-</script>
-<script>
 async function submitQuiz(button, week) {
   const studentName = prompt("Please enter your full name:");
   if (!studentName || studentName.trim() === '') {
