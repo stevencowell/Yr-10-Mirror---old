@@ -4,6 +4,51 @@ function speakText(btn){
   speechSynthesis.speak(utterance);
 }
 
+// Simple custom modal utilities to avoid browser alert/prompt headings
+function showAlert(message) {
+  return new Promise((resolve) => {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal-content">
+        <p>${message}</p>
+        <button id="modal-ok">OK</button>
+      </div>`;
+    document.body.appendChild(overlay);
+    overlay.querySelector('#modal-ok').addEventListener('click', () => {
+      document.body.removeChild(overlay);
+      resolve();
+    });
+  });
+}
+
+function showPrompt(message) {
+  return new Promise((resolve) => {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.innerHTML = `
+      <div class="modal-content">
+        <p>${message}</p>
+        <input type="text" id="modal-input" />
+        <div class="modal-buttons">
+          <button id="modal-submit">Submit</button>
+          <button id="modal-cancel">Cancel</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+    const remove = () => document.body.removeChild(overlay);
+    overlay.querySelector('#modal-submit').addEventListener('click', () => {
+      const value = overlay.querySelector('#modal-input').value;
+      remove();
+      resolve(value);
+    });
+    overlay.querySelector('#modal-cancel').addEventListener('click', () => {
+      remove();
+      resolve(null);
+    });
+  });
+}
+
     // Listen for clicks on nav links to toggle active sections
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.content-section');
@@ -52,9 +97,9 @@ document.querySelectorAll('.check-btn').forEach(button => {
   });
 });
 async function submitQuiz(button, week) {
-  const studentName = prompt("Please enter your full name:");
+  const studentName = await showPrompt("Please enter your full name:");
   if (!studentName || studentName.trim() === '') {
-    alert("You must enter your name to submit the quiz.");
+    await showAlert("You must enter your name to submit the quiz.");
     return;
   }
 
@@ -94,5 +139,5 @@ async function submitQuiz(button, week) {
     body: JSON.stringify(payload)
   });
 
-  alert('Quiz responses submitted successfully!');
+  await showAlert('Quiz responses submitted successfully!');
 }
