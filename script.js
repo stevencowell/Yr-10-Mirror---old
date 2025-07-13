@@ -72,96 +72,70 @@ function showPrompt(message) {
       });
     });
 
-// Quiz check answers functionality
-document.querySelectorAll('.check-btn').forEach(button => {
-  button.addEventListener('click', function() {
-    const quiz = this.closest('.quiz');
-    const questions = quiz.querySelectorAll('li');
-    let correctAnswers = 0;
-
-    questions.forEach(question => {
-      const selectedAnswer = question.querySelector('input[type="radio"]:checked');
-      const allAnswers = question.querySelectorAll('label');
-
-      // Reset styles
-      allAnswers.forEach(answer => answer.removeAttribute('data-result'));
-
-      if (selectedAnswer) {
-        if (selectedAnswer.hasAttribute('data-correct')) {
-          correctAnswers++;
-          selectedAnswer.parentElement.setAttribute('data-result', 'right');
-        } else {
-          selectedAnswer.parentElement.setAttribute('data-result', 'wrong');
-        }
-      }
-    });
-
-    const totalQuestions = questions.length;
-    const messageSpan = quiz.querySelector('.quiz-msg');
-    messageSpan.textContent = `You got ${correctAnswers}/${totalQuestions} correct.`;
-  });
-});
+// Rewritten quiz submission logic
 async function submitQuiz(button, week, level) {
-  const studentName = await showPrompt("Please enter your full name:");
+  const studentName = await showPrompt('Please enter your full name:');
   if (!studentName || studentName.trim() === '') {
-    await showAlert("You must enter your name to submit the quiz.");
+    await showAlert('You must enter your name to submit the quiz.');
     return;
   }
 
-  const quizElement = button.closest('.quiz');
-  const answers = [];
-  const responses = [];
+  const quiz = button.closest('.quiz');
+  const questions = quiz.querySelectorAll('li');
+  let correct = 0;
+  const textResponses = [];
 
-  Array.from(quizElement.querySelectorAll('li')).forEach((li, index) => {
-    const questionText = li.querySelector('p') ? li.querySelector('p').innerText : '';
-    const textarea = li.querySelector('textarea');
+  questions.forEach(q => {
+    const textarea = q.querySelector('textarea');
+    const labels = q.querySelectorAll('label');
+    labels.forEach(l => l.removeAttribute('data-result'));
 
     if (textarea) {
-      responses.push({ answer: textarea.value });
+      textResponses.push({ answer: textarea.value });
       return;
     }
 
-    const selectedOption = li.querySelector('input[type="radio"]:checked');
-    const correctOption = li.querySelector('input[data-correct="true"]');
-
-    const isCorrect = selectedOption ? selectedOption.hasAttribute('data-correct') : false;
-
-    answers.push({
-      questionNumber: index + 1,
-      questionText,
-      studentAnswer: selectedOption ? selectedOption.value : 'No answer',
-      correctAnswer: correctOption.value,
-      isCorrect
-    });
+    const selected = q.querySelector('input[type="radio"]:checked');
+    if (selected) {
+      if (selected.hasAttribute('data-correct')) {
+        correct++;
+        selected.parentElement.setAttribute('data-result', 'right');
+      } else {
+        selected.parentElement.setAttribute('data-result', 'wrong');
+      }
+    }
   });
 
-  const score = answers.filter(a => a.isCorrect).length;
-  const totalQuestions = answers.length;
-  const scoreText = `${score}/${totalQuestions}`;
+  const scoredQuestions = questions.length - textResponses.length;
+  const scoreText = `${correct}/${scoredQuestions}`;
 
-  const payload = {
-    studentName,
-    week,
-    level,
-    score: scoreText
-  };
+  const prefixes = { main: 'M', support: 'S', advanced: 'A' };
+  const prefix = prefixes[level.toLowerCase()] || 'M';
+  const weekNumMatch = week.match(/\d+/);
+  const weekNum = weekNumMatch ? weekNumMatch[0] : '';
+  const quizNumber = prefix + weekNum;
 
-  if (responses.length > 0) {
-    payload.responses = responses;
+  const payload = { studentName, quizNumber };
+
+  if (level.toLowerCase() === 'advanced' && textResponses.length) {
+    payload.responses = textResponses;
+  } else {
+    payload.score = scoreText;
   }
 
   if (APP_TOKEN) {
     payload.token = APP_TOKEN;
   }
 
-  await fetch(APP_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  });
-
-  await showAlert('Quiz responses submitted successfully!');
+  try {
+    await fetch(APP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    quiz.querySelector('.quiz-msg').textContent = `You got ${scoreText} correct.`;
+    await showAlert('Quiz responses submitted successfully!');
+  } catch (err) {
+    await showAlert('There was an error submitting the quiz.');
+  }
 }
