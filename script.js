@@ -104,20 +104,30 @@ async function submitQuiz(button, week, level) {
   }
 
   const quizElement = button.closest('.quiz');
-  const answers = Array.from(quizElement.querySelectorAll('li')).map((li, index) => {
-    const questionText = li.querySelector('p').innerText;
+  const answers = [];
+  const responses = [];
+
+  Array.from(quizElement.querySelectorAll('li')).forEach((li, index) => {
+    const questionText = li.querySelector('p') ? li.querySelector('p').innerText : '';
+    const textarea = li.querySelector('textarea');
+
+    if (textarea) {
+      responses.push({ answer: textarea.value });
+      return;
+    }
+
     const selectedOption = li.querySelector('input[type="radio"]:checked');
     const correctOption = li.querySelector('input[data-correct="true"]');
 
     const isCorrect = selectedOption ? selectedOption.hasAttribute('data-correct') : false;
 
-    return {
+    answers.push({
       questionNumber: index + 1,
       questionText,
       studentAnswer: selectedOption ? selectedOption.value : 'No answer',
       correctAnswer: correctOption.value,
       isCorrect
-    };
+    });
   });
 
   const score = answers.filter(a => a.isCorrect).length;
@@ -130,6 +140,10 @@ async function submitQuiz(button, week, level) {
     level,
     score: scoreText
   };
+
+  if (responses.length > 0) {
+    payload.responses = responses;
+  }
 
   await fetch('https://script.google.com/macros/s/AKfycbya0EHlfInCNU8toTn0nNeHxJSIesb9V7ms4t1ZC7dflc9AJuraEHg4tS897fNNBsRm/exec', {
     method: 'POST',
