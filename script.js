@@ -4,6 +4,11 @@ function speakText(btn){
   speechSynthesis.speak(utterance);
 }
 
+// Backend configuration
+const APP_URL = 'https://script.google.com/macros/s/AKfycbya0EHlfInCNU8toTn0nNeHxJSIesb9V7ms4t1ZC7dflc9AJuraEHg4tS897fNNBsRm/exec';
+// Replace with the token configured in your Apps Script, or leave blank
+const APP_TOKEN = 'OPTIONAL_SECRET_TOKEN';
+
 // Simple custom modal utilities to avoid browser alert/prompt headings
 function showAlert(message) {
   return new Promise((resolve) => {
@@ -145,7 +150,11 @@ async function submitQuiz(button, week, level) {
     payload.responses = responses;
   }
 
-  await fetch('https://script.google.com/macros/s/AKfycbya0EHlfInCNU8toTn0nNeHxJSIesb9V7ms4t1ZC7dflc9AJuraEHg4tS897fNNBsRm/exec', {
+  if (APP_TOKEN) {
+    payload.token = APP_TOKEN;
+  }
+
+  await fetch(APP_URL, {
     method: 'POST',
     mode: 'no-cors',
     headers: {
